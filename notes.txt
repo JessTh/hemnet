@@ -1,0 +1,25 @@
+Scrape positings information from hemnet.se. 
+Simple spider to run from command line.
+
+Run and write to output file: 
+scrapy runspider hemnet_spider.py -o output.json
+
+Search parameters are set in settings.py (examples in file comments).
+If all search parameters are left blank, all postings are returned.
+
+Uses lookup to find hemnet location id's from a location search string.
+e.g: 'gotland' will return 'Gotlands län', which is the first 
+lookup result.
+
+Example output:
+{
+   "fee": "1 784 kr/mån",
+   "price": "4 750 000 kr", 
+   "rooms": "2 rum",
+   "location-2": "Stockholm",
+   "size": "57 m²",
+   "type": "Bostadsrättslägenhet", 
+   "price-m2": "83 333 kr/m²",
+   "location-1": "Vasastan / Sibirien,"
+}
+
